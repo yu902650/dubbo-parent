@@ -11,8 +11,8 @@
     <dubbo:application name="user-service-provider"></dubbo:application>
 
     <!--  2.指定注册中心名称  -->
-    <!--    <dubbo:registry address="zookeeper://112.124.14.16:2181"></dubbo:registry>-->
-    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"></dubbo:registry>
+        <dubbo:registry address="zookeeper://112.124.14.16:2181"></dubbo:registry>
+<!--        <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"></dubbo:registry>-->
 
     <!--  3.指定通讯规则  -->
     <dubbo:protocol name="dubbo" port="20880"></dubbo:protocol>
@@ -22,6 +22,6 @@
     <!--    5.服务实现-->
     <bean id="userServiceImpl" class="com.gmall.service.impl.UserServiceImpl"></bean>
 
-<!--   提供者连接注册中心 -->
+    <!--提供者连接注册中心 -->
     <dubbo:monitor protocol="registry"></dubbo:monitor>
 </beans>

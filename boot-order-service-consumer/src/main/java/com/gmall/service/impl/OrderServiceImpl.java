@@ -30,7 +30,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List<UserAddress> initOrder(String userId) {
-        System.out.println("===>>>>>>>>   " + userId);
+        System.out.println( this.getClass().getName() + "===>>>>>>>>   " + userId );
         //查询用户收货地址
         List<UserAddress> userAddressList = userService.getUserAddressList(userId);
         return userAddressList;

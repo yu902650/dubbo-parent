@@ -32,7 +32,11 @@ public class UserServiceImpl implements UserService {
                         "单女士",
                         "17621397666",
                         "2");
-
+//        try {
+//            Thread.sleep(1000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         return Arrays.asList(address1,address2);
     }
 }

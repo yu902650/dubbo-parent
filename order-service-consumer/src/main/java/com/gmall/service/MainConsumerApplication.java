@@ -17,8 +17,8 @@ public class MainConsumerApplication {
     @SuppressWarnings("resource")
     public static void main(String[] args) throws IOException {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:consumer.xml");
-//        OrderService orderService = context.getBean(OrderService.class);
-//        orderService.initOrder("1");
+        OrderService orderService = context.getBean(OrderService.class);
+        orderService.initOrder("1");
         System.err.println("调用完成...");
         System.in.read();
     }

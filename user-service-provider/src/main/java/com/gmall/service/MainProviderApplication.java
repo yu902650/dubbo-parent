@@ -12,7 +12,7 @@ import java.io.IOException;
  * @version: V1.0
  * @Description:
  */
-public class MainApplication {
+public class MainProviderApplication {
 
     public static void main(String[] args) throws IOException {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:provider.xml");

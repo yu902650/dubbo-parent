@@ -14,11 +14,14 @@ http://dubbo.apache.org/schema/dubbo/dubbo.xsd http://www.springframework.org/sc
     <dubbo:application name="order-service-consumer"/>
 
     <!-- 注册中心暴露发现服务地址 -->
-    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+    <dubbo:registry address="zookeeper://112.124.14.16:2181"/>
 
-    <!-- 生成远程服务代理，可以和本地bean一样使用service -->
+    <!-- 生成远程服务代理，可以和本地bean一样使用service  check启动自检-->
     <dubbo:reference id="userService" interface="com.gmall.service.UserService"
-    check="false"  />
+    check="false" timeout="1" mock="return null"/>
+
+<!--    配置消费者的统一规则：-->
+    <dubbo:consumer check="false"></dubbo:consumer>
 
     <!--  消费者连接监控中心  -->
     <dubbo:monitor protocol="registry"></dubbo:monitor>
